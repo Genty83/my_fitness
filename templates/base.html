@@ -30,6 +30,8 @@
 </head>
 <body class="main-bg">
   <div class="sticky-footer-container">
+    <!-- Mobile navbar -->
+    {% include 'includes/mobile_nav.html' %}
     <!-- Header Start -->
     <header class="sticky-header main-bg">
       <div class="container wd-80-bp-lg pd-2">
@@ -114,9 +116,13 @@
 
           <div class="wrapper show-bp-lg">
             <div class="flex-row align-center gp-3">
-              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
+              <a href="#" class="list-menu-link btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
                 <i class="fas fa-user"></i>
                 account
+              </a>
+              <a href="{% url 'account_login' %}" class="list-menu-link btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
+                <i class="fas fa-user-plus"></i>
+                Login
               </a>
               <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
                 <i class="fas fa-shopping-cart"></i>
@@ -158,7 +164,7 @@
     <!-- Footer Start -->
     <footer>
       <div class="container w-100 bg-dark-3 ft-light-1">
-        <div class="grid tracks-fixed tracks-4 track-w-350 gp-4 pd-3 justify-center">
+        <div class="grid tracks-fixed tracks-5 track-w-350 gp-4 pd-3 justify-center">
           <div class="flex-col gp-2">
             <h5 class="ft-primary-1">About Us</h5>
             <p>
@@ -213,7 +219,7 @@
               </a>
             </li>
           </div>
-          <div class="flex-col gp-2">
+          <div class="flex-col gp-2 span-2">
             <h5 class="ft-primary-1">Newsletter</h5>
             <p>
               Sign up to our newsletter to receive the latest news and offers.
