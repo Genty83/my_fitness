@@ -28,7 +28,238 @@
   {% endblock %}
 
 </head>
-<body>
-  
+<body class="main-bg">
+  <div class="sticky-footer-container">
+    <!-- Header Start -->
+    <header class="sticky-header main-bg">
+      <div class="container wd-80-bp-lg pd-2">
+      
+        <div class="flex-row align-center gp-2 justify-between">
+          <div class="flex-row gp-5">
+            <div class="flex-row align-center gp-2">
+              <i class="fas fa-dumbbell ft-sz-6 ft-primary-3"></i>
+              <a href="{% url 'home' %}" class="ft-light-1 ft-sz-6 ft-wt-600">My Fitness</a>
+            </div>
+            <div class="wrapper show-bp-lg">
+              <form class="flex-row gp-1" action="">
+                <input type="text" class="bg-dark-3 bd-light-5 br-1 bd-0 ft-light-1 trans-slow" placeholder="Search">
+                <button class="btn bg-primary-1 ft-dark-1 ft-sz-1">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          
+
+          <div class="wrapper show-bp-lg">
+            <nav>
+              <ul class="flex-row align-center gp-5">
+                <li>
+                  <a href="" class="ft-light-2 ft-wt-500 ft-primary-1-hover trans-normal">
+                    Home
+                  </a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="" class="ft-light-2 ft-wt-500 ft-primary-1-hover trans-normal">
+                    Shop
+                  </a>
+                  <div class="dropdown-menu bg-dark-1 ft-light-1">
+                    <div class="grid tracks-5 tracks-fixed track-w-250 pd-2">
+                      <div class="flex-col gp-2">
+                        <h6 class="ft-light-1">By Category</h6>
+                        <ul class="flex-col gp-2">
+                          <li>
+                            <a href="#" class="ft-light-4 ft-wt-500 ft-primary-3-hover trans-normal ft-sz-2">
+                              Fitness Equipment
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="ft-light-4 ft-wt-500 ft-primary-3-hover trans-normal ft-sz-2">
+                              Gym Equipment
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="flex-col gp-2">
+                        <h6 class="ft-light-1">By Category</h6>
+                        <ul class="flex-col gp-2">
+                          <li>
+                            <a href="#" class="ft-light-4 ft-wt-500 ft-primary-3-hover trans-normal ft-sz-2">
+                              Fitness Equipment
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="ft-light-4 ft-wt-500 ft-primary-3-hover trans-normal ft-sz-2">
+                              Gym Equipment
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="ft-light-2 ft-wt-500 ft-primary-1-hover trans-normal">
+                    Deals
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="ft-light-2 ft-wt-500 ft-primary-1-hover trans-normal">
+                    Sale
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="wrapper show-bp-lg">
+            <div class="flex-row align-center gp-3">
+              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
+                <i class="fas fa-user"></i>
+                account
+              </a>
+              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
+                <i class="fas fa-shopping-cart"></i>
+                £0.00
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="bt-light-5">
+
+      <div class="wrapper show-bp-xs hide-bp-lg">
+        <div class="container wd-80-bp-lg pd-x-2 pd-y-5">
+          <div class="flex-row align-center gp-3 p-3">
+            <button type="button" class="btn icon-btn bd-0 ft-sz-1 bg-dark-1 bd-dark ft-light-1">
+              <i class="menu-btn fas fa-bars ft-sz-2 ft-light-1"></i>
+            </button>
+            
+            <div class="breadcrumb">
+              <a href="#" class="ft-light-2 ft-wt-500 ft-primary-1-hover">Home</a>
+              <i class="fas fa-chevron-right"></i>
+              <a href="#" class="ft-light-2 ft-wt-500 ft-primary-1-hover">Shop</a>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main content start -->
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+    <!-- Main content end -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="container w-100 bg-dark-3 ft-light-1">
+        <div class="grid tracks-fixed tracks-4 track-w-350 gp-4 pd-3 justify-center">
+          <div class="flex-col gp-2">
+            <h5 class="ft-primary-1">About Us</h5>
+            <p>
+              My Fitness provides a service for all your fitness equipment needs.
+            </p>
+          </div>
+          <div class="flex-col gp-2">
+            <h5 class="ft-primary-1">Contact Us</h5>
+            <ul class="flex-col gp-2">
+              <li>
+                <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                  Email: example@email.com
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                  Phone: 0123456789
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                  Address: 123 Example Street, Example City, EX1 2PL
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-col gp-2">
+            <h5 class="ft-primary-1">Useful links</h5>
+            <li>
+              <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                Fitness Equipment
+              </a>
+            </li>
+            <li>
+              <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                Sports Equipment
+              </a>
+            </li>
+            <li>
+              <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                Weights and Barbells
+              </a>
+            </li>
+            <li>
+              <a href="#" class="ft-light-2 ft-wt-300 ft-primary ft-primary-1-hover trans-normal">
+                Yoga and Pilates
+              </a>
+            </li>
+          </div>
+          <div class="flex-col gp-2">
+            <h5 class="ft-primary-1">Newsletter</h5>
+            <p>
+              Sign up to our newsletter to receive the latest news and offers.
+            </p>
+            <form class="flex-row gp-1">
+              <input type="email" class="bg-dark-3 bd-light-5 br-1 ft-light-1" placeholder="Enter your email">
+              <button class="btn bg-primary-1 ft-dark-1 ft-sz-1">
+                Subscribe
+              </button>
+            </form>
+            <div class="flex-row align-center gp-2">
+              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark ft-light-1" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark ft-light-1" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark ft-light-1" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark ft-light-1" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container w-100 bg-dark-1 ft-light-1 pd-4">
+        <div class="flex-row-wrap gp-2 align-center justify-center">
+          <div class="flex-row align-center justify-center">
+            <p class="ft-light-2">
+              &copy; 2021 My Fitness. All rights reserved.
+            </p>
+          </div>
+          <div class="flex-row align-center justify-center">
+            <p class="ft-light-2">
+              Website created by 
+              <a href="#" class="ft-primary-1 ft-light-2 ft-wt-500">
+                Craig Gent
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </div>
 </body>
 </html>
