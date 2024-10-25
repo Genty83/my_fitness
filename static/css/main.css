@@ -816,9 +816,13 @@ h6 {
   font-size: clamp(1rem, 1.2rem, 1.4rem);
 }
 
-p,
+p {
+  font-size: clamp(0.9rem, 1rem, 1.1rem);
+}
+
 label {
   font-size: clamp(0.9rem, 1rem, 1.1rem);
+  margin-bottom: 0.5rem;
 }
 
 blockquote {
@@ -1584,25 +1588,99 @@ Backgrounds
 }
 
 /*
+Allauth Styling 
+==================================================  
+*/
+.allauth-form a {
+  color: var(--info-accent-1);
+  transition: all 0.5s ease-out;
+}
+.allauth-form a:hover {
+  color: var(--info-accent-3);
+}
+
+.allauth-form input {
+  height: 35px;
+  padding-left: 0.3rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--light-accent-5);
+  border-radius: 0.25rem;
+  background-color: var(--dark-accent-2);
+  transition: all 0.5s ease-out;
+  margin-top: 0.5rem;
+}
+allauth-form input:focus {
+  box-shadow: 0px 0px 5px 2px var(--primary-accent-3);
+}
+.allauth-form label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/*
 Form Controls
 ==================================================  
 */
 
-input:not([type="checkbox"]),
-input:not([type="radio"]),
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
 textarea,
 select {
   height: 35px;
   padding-left: 0.3rem;
   outline: none;
-  border: 1px solid;
-  background-color: var(--light-accent-2);
+  border: 1px solid var(--light-accent-5);
+  border-radius: 0.25rem;
+  background-color: var(--dark-accent-2);
 }
 /* Focus */
-input:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
 textarea:focus,
 select:focus {
   box-shadow: 0px 0px 5px 2px var(--primary-accent-3);
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  position: relative;
+  border-radius: 0.25rem;
+}
+/* Hide checkbox */
+input[type="checkbox"]  {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--light-accent-5);
+  border-radius: 0.25rem;
+  appearance: none;
+}
+/* Custom checkmark */
+input[type="checkbox"]::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.7rem;
+  color: var(--light-accent-1);
+  display: none;
+}
+input[type="checkbox"]:checked::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(36%, 36%);
+  background-color: transparent;
+}
+input[type="checkbox"]:checked {
+  box-shadow: 0px 0px 5px 3px var(--primary-accent-1);
 }
 
 /*
@@ -1760,18 +1838,22 @@ Breadcrumb
 }
 
 /*
-Modals
+List menu
 ==================================================  
 */
-.modal {
-  position: fixed;
-  top: 0;
+
+.list-menu {
+  position: absolute;
   left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  top: 35px;
+  height: auto;
+  width: 200px;
+  transition: all 1s ease-out;
+  overflow: hidden;
+  background-color: var(--dark-accent-1);
   z-index: 9999;
+  box-shadow: 2px 2px 5px 1px var(--light-accent-5);
+  opacity: 0;
 }
 
 /* 
