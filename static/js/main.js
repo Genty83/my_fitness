@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
 
     if (sidebar.getBoundingClientRect().width === 0) {
-      sidebar.style.width = '250px';
+      sidebar.style.width = '300px';
     } else {
       sidebar.style.width = '0px';
     }
