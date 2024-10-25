@@ -25,4 +25,16 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     # include the home urls
     path('', include('home.urls')),
+    # include product urls
+    path('all_products/', include('products.urls')),
+    #
+    path('bag/', include('bag.urls')),
+    #
+    path('checkout/', include('checkout.urls')),
+    #
+    path('reviews/', include('reviews.urls')),
+    #
+    path('newsletter/', include('newsletter.urls')),
+    #
+    path('profiles/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
