@@ -57,7 +57,7 @@
             <nav>
               <ul class="flex-row align-center gp-5">
                 <li>
-                  <a href="" class="ft-light-2 ft-wt-500 ft-primary-1-hover trans-normal">
+                  <a href="{% url 'home' %}" class="ft-light-2 ft-wt-500 ft-primary-1-hover trans-normal">
                     Home
                   </a>
                 </li>
@@ -116,15 +116,15 @@
 
           <div class="wrapper show-bp-lg">
             <div class="flex-row align-center gp-3">
-              <a href="#" class="list-menu-link btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
+              <a href="{% url 'profiles' %}" class="list-menu-link btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
                 <i class="fas fa-user"></i>
-                account
+                Profile
               </a>
               <a href="{% url 'account_login' %}" class="list-menu-link btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
                 <i class="fas fa-user-plus"></i>
                 Login
               </a>
-              <a href="#" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
+              <a href="{% url 'checkout' %}" class="btn icon-btn bd-0 ft-sz-1 bg-dark-2 bd-dark-3 ft-light-1 trans-normal">
                 <i class="fas fa-shopping-cart"></i>
                 £0.00
               </a>
